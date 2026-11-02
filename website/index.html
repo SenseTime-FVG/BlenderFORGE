@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="BlenderFORGE: Framework for Optimizing Reactive 3D-Graphics Editing Ability of MLLMs."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <title>BlenderFORGE</title>
+    <link rel="icon" href="./assets/images/icon.jpg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./leaderboard-data.js"></script>
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="paper-header">
+      <h1>
+        <strong>BlenderFORGE</strong>: Framework for Optimizing Reactive<br
+          class="title-break"
+        />
+        3D-Graphics Editing Ability of MLLMs
+      </h1>
+      <div class="paper-links">
+        <a href="./assets/paper.pdf" target="_blank" rel="noopener"
+          ><img
+            src="./assets/icons/paper.svg"
+            width="48"
+            height="48"
+            alt=""
+          /><span>Paper</span></a
+        ><a
+          href="https://github.com/SenseTime-FVG/BlenderFORGE"
+          ><img
+            src="./assets/icons/code.svg"
+            width="48"
+            height="48"
+            alt=""
+          /><span>Code</span></a
+        ><a href="#results"
+          ><img
+            src="./assets/icons/leaderboard.svg"
+            width="48"
+            height="48"
+            alt=""
+          /><span>Leaderboard</span></a
+        >
+      </div>
+    </header>
+    <main id="main" class="content">
+      <section aria-labelledby="abstract-title">
+        <h2 id="abstract-title">Abstract</h2>
+        <p class="abstract">
+          Precise, programmatic 3D editing requires executable interaction and
+          verifiable feedback. We introduce <strong>BlenderFORGE</strong>, a
+          data&ndash;environment&ndash;optimization framework for training
+          open-weight multimodal agents to edit Blender scenes through Python
+          code. The framework combines perturbation-based task generation, an
+          instance-isolated Blender sandbox, and a two-stage training pipeline
+          comprising trajectory supervised fine-tuning and multi-turn
+          AgentLoop-RL. It covers four task families: object placement,
+          shape-key editing, lighting adjustment, and material modification. The
+          trained Qwen3-VL-8B agent improves over its base model across all four
+          families. Evaluations on held-out camera tasks, BlenderGym, and a
+          second model backbone provide additional evidence of transfer.
+        </p>
+        <figure class="overview">
+          <a
+            href="./assets/images/framework.webp"
+            target="_blank"
+            rel="noopener"
+            ><img
+              src="./assets/images/framework.webp"
+              alt="BlenderFORGE framework: perturbation-based task generation, Blender sandbox, trajectory SFT, general SFT, and AgentLoop-RL."
+              width="3258"
+              height="1150"
+          /></a>
+          <figcaption>
+            BlenderFORGE integrates task generation, executable interaction, and
+            agent optimization in a shared scene-state space.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section aria-labelledby="video-title">
+        <div class="section-title">
+          <h2 id="video-title">Video</h2>
+          <button
+            class="expand-video"
+            type="button"
+            data-expand="overview-video"
+            aria-label="Expand overview video"
+          >
+            Expand
+          </button>
+        </div>
+        <video
+          id="overview-video"
+          controls
+          playsinline
+          preload="metadata"
+          poster="./assets/images/copilot.jpg"
+          aria-label="BlenderFORGE interaction demonstration"
+        >
+          <source
+            src="./assets/videos/blender_copilot_demo.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </section>
+
+      <section id="demos" aria-labelledby="demos-title">
+        <h2 id="demos-title">Demonstrations</h2>
+        <div class="demo-grid">
+          <figure>
+            <div class="video-heading">
+              <h3>Object Placement</h3>
+              <button
+                class="expand-video"
+                type="button"
+                data-expand="placement-video"
+                aria-label="Expand object placement video"
+              >
+                Expand
+              </button>
+            </div>
+            <video
+              id="placement-video"
+              controls
+              playsinline
+              preload="metadata"
+              poster="./assets/images/placement.jpg"
+              aria-label="Object placement demonstration"
+            >
+              <source src="./assets/videos/placement.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              Object translation and rotation from aligned scene views.
+            </figcaption>
+          </figure>
+          <figure>
+            <div class="video-heading">
+              <h3>Shape-Key Editing</h3>
+              <button
+                class="expand-video"
+                type="button"
+                data-expand="shape-video"
+                aria-label="Expand shape-key video"
+              >
+                Expand
+              </button>
+            </div>
+            <video
+              id="shape-video"
+              controls
+              playsinline
+              preload="metadata"
+              poster="./assets/images/shape.jpg"
+              aria-label="Shape-key editing demonstration"
+            >
+              <source src="./assets/videos/shape-key.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              Shape-key coefficient adjustment to match target geometry.
+            </figcaption>
+          </figure>
+          <figure>
+            <div class="video-heading">
+              <h3>Lighting Adjustment</h3>
+              <button
+                class="expand-video"
+                type="button"
+                data-expand="lighting-video"
+                aria-label="Expand lighting video"
+              >
+                Expand
+              </button>
+            </div>
+            <video
+              id="lighting-video"
+              controls
+              playsinline
+              preload="metadata"
+              poster="./assets/images/lighting.jpg"
+              aria-label="Lighting adjustment demonstration"
+            >
+              <source src="./assets/videos/lighting.mp4" type="video/mp4" />
+            </video>
+            <figcaption>Illumination color and energy modification.</figcaption>
+          </figure>
+          <figure>
+            <div class="video-heading">
+              <h3>Material Modification</h3>
+              <button
+                class="expand-video"
+                type="button"
+                data-expand="material-video"
+                aria-label="Expand material video"
+              >
+                Expand
+              </button>
+            </div>
+            <video
+              id="material-video"
+              controls
+              playsinline
+              preload="metadata"
+              poster="./assets/images/material.jpg"
+              aria-label="Material modification demonstration"
+            >
+              <source src="./assets/videos/material.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              Shader parameter editing with rendered feedback.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="results" aria-labelledby="results-title">
+        <h2 id="results-title">Quantitative Results</h2>
+        <p>
+          Comparison of zero-shot and BlenderFORGE-trained models on the test
+          set. Results include Qwen3-VL-8B and Qwen3.5-9B backbones.
+        </p>
+        <div
+          class="leaderboard-tabs"
+          role="tablist"
+          aria-label="Evaluation task"
+        >
+          <button
+            role="tab"
+            data-task="placement"
+            aria-selected="true"
+            id="results-placement"
+            aria-controls="leaderboard-panel"
+          >
+            Placement</button
+          ><button
+            role="tab"
+            data-task="shape"
+            aria-selected="false"
+            id="results-shape"
+            aria-controls="leaderboard-panel"
+            tabindex="-1"
+          >
+            Shape Keys</button
+          ><button
+            role="tab"
+            data-task="lighting"
+            aria-selected="false"
+            id="results-lighting"
+            aria-controls="leaderboard-panel"
+            tabindex="-1"
+          >
+            Lighting</button
+          ><button
+            role="tab"
+            data-task="material"
+            aria-selected="false"
+            id="results-material"
+            aria-controls="leaderboard-panel"
+            tabindex="-1"
+          >
+            Material
+          </button>
+        </div>
+        <div class="leaderboard-toolbar">
+          <div>
+            <label class="sr-only" for="model-search">Search models</label
+            ><input
+              id="model-search"
+              type="search"
+              placeholder="Search models"
+            /><label class="sr-only" for="model-group">Model group</label
+            ><select id="model-group">
+              <option value="all">All models</option>
+              <option value="open">Open-weight + trained</option>
+              <option value="proprietary">Proprietary</option>
+              <option value="ours">BlenderFORGE</option>
+            </select>
+          </div>
+          <div class="table-actions">
+            <button id="reset-order" type="button">Paper order</button
+            ><button id="export-csv" type="button">Export CSV</button>
+          </div>
+        </div>
+        <div
+          id="leaderboard-panel"
+          role="tabpanel"
+          aria-labelledby="results-placement"
+        >
+          <div
+            class="table-scroll"
+            tabindex="0"
+            aria-label="Scrollable results table"
+          >
+            <table id="leaderboard">
+              <caption></caption>
+              <thead></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <p id="result-count" class="table-status" aria-live="polite"></p>
+        </div>
+        <p class="metric-note" id="metric-note"></p>
+        <noscript
+          ><p>
+            <a href="./assets/paper.pdf#page=7">Table 1</a> and
+            <a href="./assets/paper.pdf#page=24">Tables 11 and 12</a> provide
+            related results in the paper.
+          </p></noscript
+        >
+      </section>
+
+      <section id="citation" aria-labelledby="citation-title">
+        <h2 id="citation-title">Citation</h2>
+        <pre
+          class="citation"
+        ><code>% Placeholder: bibliographic details to be updated.
+@misc{blenderforge,
+  title  = {BlenderFORGE: Framework for Optimizing Reactive
+            3D-Graphics Editing Ability of MLLMs},
+  author = {TBD},
+  year   = {TBD}
+}</code></pre>
+      </section>
+    </main>
+    <footer class="content">
+      <p>
+        Page layout inspired by
+        <a href="https://sensetime-fvg.github.io/CVD-STORM/">CVD-STORM</a>.
+      </p>
+    </footer>
+
+    <dialog id="video-dialog" aria-labelledby="expanded-video-title">
+      <div class="dialog-heading">
+        <h2 id="expanded-video-title">Video</h2>
+        <div>
+          <button id="fullscreen-video" type="button">Full screen</button
+          ><button id="close-video" type="button">Close</button>
+        </div>
+      </div>
+      <video
+        id="expanded-video"
+        controls
+        playsinline
+        preload="metadata"
+      ></video>
+    </dialog>
+  </body>
+</html>
