@@ -87,6 +87,13 @@ h1 {
   margin: 28px auto 0;
   color: var(--link);
 }
+.publication-venue {
+  font-family: "Google Sans", "Noto Sans", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 18px 0 0;
+  color: #363636;
+}
 .publication-authors span {
   display: inline-block;
   white-space: nowrap;
@@ -383,16 +390,25 @@ tr.reference td {
 #reset-order:hover {
   text-decoration: underline;
 }
+#citation {
+  width: min(1120px, calc(100vw - 48px));
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .citation {
   margin: 0;
-  padding: 15px 18px;
+  padding: 24px;
   border-block: 1px solid #ddd;
   background: #fafafa;
   font-family: "Courier New", Courier, monospace;
-  font-size: 13px;
-  line-height: 1.5;
+  font-size: 17px;
+  line-height: 1.65;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
+}
+.citation code {
+  font: inherit;
 }
 th.model-column {
   min-width: 220px;
@@ -545,6 +561,17 @@ body:has(dialog[open]) {
   .publication-authors {
     font-size: 18px;
     margin-top: 22px;
+  }
+  .publication-venue {
+    font-size: 23px;
+    margin-top: 16px;
+  }
+  #citation {
+    width: 100%;
+  }
+  .citation {
+    font-size: 15px;
+    padding: 16px;
   }
   .publication-affiliations {
     font-size: 17px;
