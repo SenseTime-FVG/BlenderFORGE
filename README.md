@@ -3,7 +3,6 @@
 **Framework for Optimizing Reactive 3D-Graphics Editing Ability of MLLMs**
 
 [Project Page](https://sensetime-fvg.github.io/BlenderFORGE/) ·
-[Paper](website/assets/paper.pdf) ·
 [Leaderboard](https://sensetime-fvg.github.io/BlenderFORGE/#results)
 
 BlenderFORGE trains open-weight multimodal agents to edit explicit Blender scenes
@@ -17,28 +16,19 @@ base models and zero-shot model references.
 
 ![BlenderFORGE framework](website/assets/images/framework.webp)
 
-## Editing Tasks
-
-| Task | Editing Target |
-| --- | --- |
-| Placement | Object translation and rotation |
-| Shape-Key | Blend-shape coefficients |
-| Lighting | Light color and energy |
-| Material | Shader parameters |
-
 The project page includes the framework overview, video demonstrations and an
 interactive leaderboard with task filters, metric sorting and CSV export.
 
 ## Release Checklist
 
-- [ ] Evaluation code.
-- [ ] Blender Sandbox code.
-- [ ] Model checkpoints on Hugging Face.
-- [ ] Datasets on Hugging Face.
+- [ ] **Evaluation code:** multi-model evaluation, task prompts and metric aggregation.
+- [ ] **Blender Sandbox:** executable scene editing, rendered feedback and scene-state export.
+- [ ] **Training code:** supervised fine-tuning and multi-turn reinforcement learning.
+- [ ] **Data generation pipeline:** task construction, scene perturbation and validation.
+- [ ] **Model checkpoints:** BlenderFORGE-trained models on Hugging Face.
+- [ ] **Datasets:** editing tasks, metadata and evaluation splits on Hugging Face.
 
 ## Citation
-
-Bibliographic details will be finalized with the public paper release.
 
 ```bibtex
 @misc{blenderforge,

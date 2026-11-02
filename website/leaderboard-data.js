@@ -3,7 +3,6 @@ window.BLENDERFORGE_RESULTS = {
     title:
       "BlenderFORGE: Framework for Optimizing Reactive 3D-Graphics Editing Ability of MLLMs",
     table: "Tables 1 and 11, with provided NIPS baseline results",
-    pdf: "./assets/paper.pdf",
     notes: [
       "Comparison values are transcribed from the supplied paper; the Qwen3.5-9B (Thinking) row uses the subsequently provided full NIPS baseline results.",
       "PL and N-CLIP are reported in units of 10^-3; lower is better. SR@.1, SR@.3, and SR@.5 are percentages; higher is better. Med. is the median normalized discrepancy; lower is better.",

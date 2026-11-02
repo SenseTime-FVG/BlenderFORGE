@@ -7,3 +7,4 @@ outputs/
 *.log
 .env
 .env.*
+/website/assets/paper.pdf
