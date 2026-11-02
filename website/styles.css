@@ -125,7 +125,8 @@ h1 {
   margin-top: 28px;
   font-size: 16px;
 }
-.paper-links a {
+.paper-links a,
+.paper-links button {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -136,6 +137,11 @@ h1 {
   color: white;
   background: #363636;
   line-height: 1.5;
+  border: 0;
+}
+.paper-links button:disabled {
+  background: #626262;
+  cursor: default;
 }
 .paper-links a:hover {
   background: #292929;
