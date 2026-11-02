@@ -138,9 +138,12 @@ h1 {
   background: #363636;
   line-height: 1.5;
   border: 0;
+  appearance: none;
+  opacity: 1;
+  font: inherit;
+  white-space: nowrap;
 }
 .paper-links button:disabled {
-  background: #626262;
   cursor: default;
 }
 .paper-links a:hover {
