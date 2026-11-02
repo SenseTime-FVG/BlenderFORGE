@@ -1,6 +1,4 @@
-# BlenderFORGE
-
-**Framework for Optimizing Reactive 3D-Graphics Editing Ability of MLLMs**
+# BlenderFORGE: Framework for Optimizing Reactive 3D-Graphics Editing Ability of MLLMs
 
 [Project Page](https://sensetime-fvg.github.io/BlenderFORGE/) ·
 [Leaderboard](https://sensetime-fvg.github.io/BlenderFORGE/#results)
@@ -16,9 +14,6 @@ evaluated on the test split against their respective base models and zero-shot
 model baselines.
 
 ![BlenderFORGE framework](website/assets/images/framework.webp)
-
-The project page includes the framework overview, video demonstrations and an
-interactive leaderboard with task filters, metric sorting and CSV export.
 
 ## Release Checklist
 
