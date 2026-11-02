@@ -1,7 +1,8 @@
 # BlenderFORGE: Framework for Optimizing Reactive 3D-Graphics Editing Ability of MLLMs
 
 [Project Page](https://sensetime-fvg.github.io/BlenderFORGE/) ·
-[Leaderboard](https://sensetime-fvg.github.io/BlenderFORGE/#results)
+[Leaderboard](https://sensetime-fvg.github.io/BlenderFORGE/#results) ·
+arXiv · Hugging Face
 
 BlenderFORGE trains open-weight multimodal agents to edit explicit Blender scenes
 through executable Python actions. It connects perturbation-based task generation,
@@ -17,6 +18,7 @@ model baselines.
 
 ## Release Checklist
 
+- [x] **Project page:** framework overview, demonstration videos and interactive leaderboard.
 - [ ] **Evaluation code:** multi-model evaluation, task prompts and metric aggregation.
 - [ ] **Blender Sandbox:** executable scene editing, rendered feedback and scene-state export.
 - [ ] **Training code:** supervised fine-tuning and multi-turn reinforcement learning.
