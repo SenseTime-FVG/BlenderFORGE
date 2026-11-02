@@ -10,9 +10,10 @@ through executable Python actions. It connects perturbation-based task generatio
 an interactive Blender sandbox with rendered and structured feedback, and
 trajectory supervised fine-tuning followed by multi-turn reinforcement learning.
 
-The benchmark covers four editing families, with 9,000 training tasks and 800
-test tasks. Qwen3-VL-8B and Qwen3.5-9B agents are compared with their respective
-base models and zero-shot model references.
+The BlenderFORGE dataset spans four editing families and contains 9,000 training
+tasks and 800 test tasks. The trained Qwen3-VL-8B and Qwen3.5-9B agents are
+evaluated on the test split against their respective base models and zero-shot
+model baselines.
 
 ![BlenderFORGE framework](website/assets/images/framework.webp)
 
