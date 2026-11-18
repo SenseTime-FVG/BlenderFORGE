@@ -2,7 +2,7 @@
 
 [Project Page](https://sensetime-fvg.github.io/BlenderFORGE/) ·
 [Leaderboard](https://sensetime-fvg.github.io/BlenderFORGE/#results) ·
-arXiv · Hugging Face
+[arXiv](https://arxiv.org/abs/2611.10768v1) · Hugging Face
 
 BlenderFORGE trains open-weight multimodal agents to edit explicit Blender scenes
 through executable Python actions. It connects perturbation-based task generation,
