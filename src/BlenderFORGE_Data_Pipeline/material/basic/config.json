@@ -1,0 +1,131 @@
+{
+  "paths": {
+    "blend_file": "base_scene.blend",
+    "output_base_dir": "/replace/with/your/material_dataset"
+  },
+  "scene": {
+    "target_object": "Sphere",
+    "target_camera": "Camera",
+    "target_material": "material_applied"
+  },
+  "material_modification": {
+    "modification_type": "multi_param",
+    "multi_param": {
+      "min_params": 2,
+      "max_params": 3
+    },
+    "parameters": {
+      "Base Color": {
+        "type": "color",
+        "min": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "max": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "Metallic": {
+        "type": "float",
+        "min": 0.0,
+        "max": 1.0
+      },
+      "Roughness": {
+        "type": "float",
+        "min": 0.0,
+        "max": 1.0
+      },
+      "Alpha": {
+        "type": "float",
+        "min": 0.0,
+        "max": 1.0
+      }
+    }
+  },
+  "validation": {
+    "min_photometric_diff": 0.01
+  },
+  "batch_generation": {
+    "num_samples": 10,
+    "start_sample_id": 0,
+    "max_attempts": 5
+  },
+  "random_seed": 0,
+  "render_config": {
+    "scene": {
+      "render": {
+        "engine": "CYCLES",
+        "resolution_x": 512,
+        "resolution_y": 512,
+        "resolution_percentage": 100,
+        "pixel_aspect_x": null,
+        "pixel_aspect_y": null,
+        "film_transparent": null,
+        "use_file_extension": null,
+        "use_compositing": null,
+        "use_sequencer": null,
+        "dither_intensity": null,
+        "use_motion_blur": null,
+        "image_settings": {
+          "file_format": "PNG",
+          "color_mode": null,
+          "color_depth": null,
+          "compression": null,
+          "color_management": null
+        }
+      },
+      "cycles": {
+        "device": "GPU",
+        "samples": 128,
+        "seed": null,
+        "use_animated_seed": null,
+        "use_adaptive_sampling": null,
+        "adaptive_threshold": null,
+        "adaptive_min_samples": null,
+        "use_denoising": true,
+        "denoiser": null,
+        "denoising_input_passes": null,
+        "denoising_prefilter": null,
+        "use_light_tree": null,
+        "max_bounces": 4,
+        "diffuse_bounces": 2,
+        "glossy_bounces": 2,
+        "transmission_bounces": 2,
+        "volume_bounces": null,
+        "transparent_max_bounces": null,
+        "sample_clamp_direct": null,
+        "sample_clamp_indirect": null,
+        "blur_glossy": null,
+        "caustics_reflective": null,
+        "caustics_refractive": null
+      },
+      "display_settings": {
+        "display_device": null
+      },
+      "view_settings": {
+        "view_transform": null,
+        "look": null,
+        "exposure": null,
+        "gamma": null,
+        "use_curve_mapping": null
+      }
+    },
+    "view_layer": {
+      "cycles": {
+        "use_denoising": null
+      }
+    },
+    "devices": {
+      "compute_device_type": "CUDA",
+      "use_cpu": null,
+      "fallback_to_cpu": false
+    }
+  },
+  "max_goal_attempts": 100,
+  "replay_image_tolerance": 0.0005
+}

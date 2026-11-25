@@ -1,0 +1,873 @@
+{
+  "78 kombi.LOW. UV.SHAPE KEY.blend": {
+    "shape_keys": {
+      "Cube": [
+        "Basis",
+        "CubedStyle",
+        "LiftLightLargerWindow",
+        "LowerLghtLargerWindow"
+      ]
+    },
+    "error": null
+  },
+  "AirConditioner.blend": {
+    "shape_keys": {
+      "Cube.003": [
+        "Basis",
+        "Key1"
+      ]
+    },
+    "error": null
+  },
+  "Blinds.blend": {
+    "shape_keys": {
+      "Blinds": [
+        "Basis",
+        "Blinds open",
+        "Blinds folds left",
+        "Blinds folds right"
+      ]
+    },
+    "error": null
+  },
+  "Box.blend": {
+    "shape_keys": {
+      "Case": [
+        "Basis",
+        "Open"
+      ]
+    },
+    "error": null
+  },
+  "Draver.blend": {
+    "shape_keys": {
+      "Commode": [
+        "Basis",
+        "Draver1",
+        "Draver2",
+        "Draver3",
+        "Draver4"
+      ]
+    },
+    "error": null
+  },
+  "Drawer.blend": {
+    "shape_keys": {
+      "Cube.004": [
+        "Basis",
+        "Drawer 1",
+        "Drawer 2",
+        "Drawer 3",
+        "Drawer 4",
+        "Drawer 5",
+        "Drawer 6",
+        "Drawer 7"
+      ]
+    },
+    "error": null
+  },
+  "F15SE Nozzle UV + KEY.blend": {
+    "shape_keys": {
+      "engine": [
+        "Base",
+        "Open"
+      ]
+    },
+    "error": null
+  },
+  "LightTable.blend": {
+    "shape_keys": {
+      "Desk with drawers - Light - Mesh": [
+        "Basis",
+        "Top Drawer",
+        "Middle Drawer",
+        "Bottom Drawer",
+        "Drawer left/right"
+      ]
+    },
+    "error": null
+  },
+  "Man.blend": {
+    "shape_keys": {
+      "Body": [
+        "Basis",
+        "eyeBlinkLeft",
+        "eyeLookDownLeft",
+        "eyeLookInLeft",
+        "eyeLookOutLeft",
+        "eyeLookUpLeft",
+        "eyeSquintLeft",
+        "eyeWideLeft",
+        "eyeBlinkRight",
+        "eyeLookDownRight",
+        "eyeLookInRight",
+        "eyeLookOutRight",
+        "eyeLookUpRight",
+        "eyeSquintRight",
+        "eyeWideRight",
+        "jawForward",
+        "jawLeft",
+        "jawRight",
+        "jawOpen",
+        "mouthClose",
+        "mouthFunnel",
+        "mouthPucker",
+        "mouthRight",
+        "mouthLeft",
+        "mouthSmileLeft",
+        "mouthSmileRight",
+        "mouthFrownRight",
+        "mouthFrownLeft",
+        "mouthDimpleLeft",
+        "mouthDimpleRight",
+        "mouthStretchLeft",
+        "mouthStretchRight",
+        "mouthRollLower",
+        "mouthRollUpper",
+        "mouthShrugLower",
+        "mouthShrugUpper",
+        "mouthPressLeft",
+        "mouthPressRight",
+        "mouthLowerDownLeft",
+        "mouthLowerDownRight",
+        "mouthUpperUpLeft",
+        "mouthUpperUpRight",
+        "browDownLeft",
+        "browDownRight",
+        "browInnerUp",
+        "browOuterUpLeft",
+        "browOuterUpRight",
+        "cheekPuff",
+        "cheekSquintLeft",
+        "cheekSquintRight"
+      ]
+    },
+    "error": null
+  },
+  "SantaHat.blend": {
+    "shape_keys": {
+      "Santas hat": [
+        "Basis",
+        "SimpleDeform",
+        "Wearing",
+        "Lying on the ground"
+      ]
+    },
+    "error": null
+  },
+  "Sketchfab_2017_07_26_20_12_05.blend": {
+    "shape_keys": {
+      "veau": [
+        "Basis",
+        "LeftEarLarge",
+        "RightEarLarge",
+        "LargeForeHead"
+      ]
+    },
+    "error": null
+  },
+  "Sketchfab_2022_02_06_02_41_46.blend": {
+    "shape_keys": {
+      "Icosphere.004": [
+        "Basis",
+        "DropSplit",
+        "DropDown",
+        "DropFlatten",
+        "EnlargeDrop"
+      ],
+      "MeltingIceCream": [
+        "Basis",
+        "MeltingStreamUp",
+        "EndDropletShrink"
+      ]
+    },
+    "error": null
+  },
+  "SunChair.blend": {
+    "shape_keys": {
+      "Sun lounger for pool": [
+        "Basis",
+        "LieDown"
+      ]
+    },
+    "error": null
+  },
+  "SunLounge.blend": {
+    "shape_keys": {
+      "Sun lounger-02": [
+        "Basis",
+        "Down"
+      ]
+    },
+    "error": null
+  },
+  "TablewithDrawer.blend": {
+    "shape_keys": {
+      "Desk with drawers - Dark - Mesh": [
+        "Basis",
+        "Top Drawer",
+        "Middle Drawer",
+        "Bottom Drawer",
+        "Drawer left/right"
+      ]
+    },
+    "error": null
+  },
+  "Wardrobe.blend": {
+    "shape_keys": {
+      "Shelve": [
+        "Basis",
+        "Draver1",
+        "Draver2"
+      ]
+    },
+    "error": null
+  },
+  "blendshape_11_20.blend": {
+    "shape_keys": {
+      "PIXXO_CH_001": [
+        "Basis",
+        "Mouth open",
+        "Left side smile",
+        "Right side smile",
+        "Left eye close",
+        "Right eye close",
+        "Left raised eyebrow",
+        "Right raised eyebrow",
+        "Left lifted eyebrow",
+        "Right lifted eyebrow",
+        "Left furrow eyebrow",
+        "Right furrow eyebrow",
+        "Left eyebrow upward tilt",
+        "Right eyebrow upward tilt",
+        "Pursed lips",
+        "Scrunch nose",
+        "Left eye outer corner lift",
+        "Right eye outer corner lift",
+        "Left eye inner corner lift",
+        "Right eye inner corner lift"
+      ]
+    },
+    "error": null
+  },
+  "blendshape_1_10.blend": {
+    "shape_keys": {
+      "body": [
+        "Basis",
+        "BellySag",
+        "BellyShrink",
+        "ShoulderWideness",
+        "BackTaper",
+        "ChestEnlarge",
+        "Abs",
+        "ChestArea",
+        "MoreChin",
+        "eyelids",
+        "nose"
+      ],
+      "hair": [
+        "Basis",
+        "beardchin",
+        "eyelash",
+        "mustache",
+        "bang",
+        "hair"
+      ],
+      "short": [
+        "Basis",
+        "WaistLineShrink"
+      ]
+    },
+    "error": null
+  },
+  "blendshape_21_30.blend": {
+    "shape_keys": {
+      "50' Tv": [
+        "Basis",
+        "TV Size"
+      ],
+      "ALMOADON .003": [
+        "Basis",
+        "Blue Pillow Size"
+      ],
+      "ALMOHADON.001": [
+        "Basis",
+        "Pink Pillow Length"
+      ],
+      "BANCO": [
+        "Basis",
+        "Chair Area"
+      ],
+      "BezierCurve.001": [
+        "Basis",
+        "Plant Height"
+      ],
+      "CUADRO.001": [
+        "Basis",
+        "Painting Size"
+      ],
+      "Cylinder": [
+        "Basis",
+        "Left Cupboard Door"
+      ],
+      "Cylinder.001": [
+        "Basis",
+        "Right Cupboard Door"
+      ],
+      "door_01": [
+        "Basis",
+        "Closet Right Door"
+      ],
+      "door_02": [
+        "Basis",
+        "Closet Left Door"
+      ],
+      "ESTANTE.002": [
+        "Basis",
+        "Platform Size"
+      ],
+      "Handball Ball": [
+        "Basis",
+        "Ball Size"
+      ],
+      "Lock 1": [
+        "Basis",
+        "Pet House Size",
+        "Pet House Door"
+      ],
+      "PATAS": [
+        "Basis"
+      ],
+      "Plane.006": [
+        "Basis",
+        "Cushion Area"
+      ]
+    },
+    "error": null
+  },
+  "blendshape_31_35.blend": {
+    "shape_keys": {
+      "Aviator Glasses": [
+        "Basis",
+        "Leg Length",
+        "Upper connector  angle",
+        "Lower connector  angle",
+        "Left Nosepad angle",
+        "Right Nosepad angle",
+        "Glass upper width",
+        "Glass lower width",
+        "Left leg angle",
+        "Right leg angle",
+        "Leg Width"
+      ]
+    },
+    "error": null
+  },
+  "blendshape_36_40.blend": {
+    "shape_keys": {
+      "Table.001": [
+        "Basis",
+        "Table Size",
+        "Leg Direction",
+        "Baffle Width",
+        "Table Thickness",
+        "Table Differenciation"
+      ]
+    },
+    "error": null
+  },
+  "blendshape_41_45.blend": {
+    "shape_keys": {
+      "Wine glass.001": [
+        "Basis",
+        "Bowl Middle Width",
+        "Bowl Base Width",
+        "Bowl Mouth Narrow",
+        "Bowl Shortness",
+        "Leg Shortness",
+        "Base Width"
+      ]
+    },
+    "error": null
+  },
+  "blendshape_46_55.blend": {
+    "shape_keys": {
+      "Blue light blocker": [
+        "Basis",
+        "Blue Police Light"
+      ],
+      "Left Back Blocker": [
+        "Basis",
+        "Left Rear Light"
+      ],
+      "Left Front Blocker": [
+        "Basis",
+        "Left Front Light"
+      ],
+      "Plane.014": [
+        "Basis",
+        "Key 1"
+      ],
+      "Plane.017": [
+        "Basis",
+        "Trunk Open",
+        "Logo Size"
+      ],
+      "Plane.028": [
+        "Basis",
+        "Mirror Size",
+        "Handle Size"
+      ],
+      "Plane.031": [
+        "Basis",
+        "Windows"
+      ],
+      "Plane.053": [
+        "Basis",
+        "Engine Cover Open"
+      ],
+      "Plane.055": [
+        "Basis",
+        "Top Rack"
+      ],
+      "Red light blocker": [
+        "Basis",
+        "Red Police Light"
+      ],
+      "Right Back Blocker": [
+        "Basis",
+        "Right Rear Light"
+      ],
+      "Right Front Blocker": [
+        "Basis",
+        "Right Front Light"
+      ],
+      "scrach_bar_L-part.001": [
+        "Basis",
+        "Bumper Length"
+      ],
+      "scrach_bar_mount.001": [
+        "Basis",
+        "Key 1"
+      ]
+    },
+    "error": null
+  },
+  "blendshape_56_60.blend": {
+    "shape_keys": {
+      "Circle.001": [
+        "Basis",
+        "Key 1"
+      ],
+      "Plane.010": [
+        "Basis",
+        "Ear Length"
+      ],
+      "Sphere.003": [
+        "Basis",
+        "mouth open",
+        "lower smile",
+        "whistle",
+        "Mouth location",
+        "Curly Mouth",
+        "Cry Mouth",
+        "Disgust Face"
+      ]
+    },
+    "error": null
+  },
+  "blendshape_66_70.blend": {
+    "shape_keys": {
+      "Bolt": [
+        "Basis",
+        "shield size"
+      ],
+      "Human.002": [
+        "Basis",
+        "Key 1"
+      ],
+      "Plane.002": [
+        "Basis",
+        "shoulder armor size"
+      ],
+      "Plane.009": [
+        "Basis",
+        "sword length",
+        "sword width"
+      ],
+      "Sphere.004": [
+        "Basis",
+        "head armor height",
+        "head armor width"
+      ],
+      "Sphere.007": [
+        "Basis",
+        "back up",
+        "front up",
+        "front down",
+        "back down",
+        "bottom crease ",
+        "widness"
+      ],
+      "Sphere.010": [
+        "Basis",
+        "Key 5"
+      ],
+      "Sphere.011": [
+        "Basis",
+        "back up",
+        "front up",
+        "front down",
+        "back down",
+        "Key 5"
+      ]
+    },
+    "error": null
+  },
+  "blendshape_71_75.blend": {
+    "shape_keys": {
+      "Table.001": [
+        "Basis",
+        "Table Size",
+        "Leg Direction",
+        "Baffle Width",
+        "Table Thickness",
+        "Table Differenciation"
+      ]
+    },
+    "error": null
+  },
+  "blendshape_76_85.blend": {
+    "shape_keys": {
+      "bumper.001": [
+        "Basis",
+        "Front Bumper Lip Extension"
+      ],
+      "hood part 2.001": [
+        "Basis",
+        "Front Cover Up"
+      ],
+      "l g h 2.001": [
+        "Basis",
+        "Window Open",
+        "Vertical Door Up",
+        "Horizontal Door Out"
+      ],
+      "roof and back.001": [
+        "Basis",
+        "Rear Cover Up"
+      ],
+      "wing.001": [
+        "Basis",
+        "Back Wing Up"
+      ]
+    },
+    "error": null
+  },
+  "car low poly.blend": {
+    "shape_keys": {
+      "bus": [
+        "Basis",
+        "SportStyle",
+        "TruckStyle"
+      ]
+    },
+    "error": null
+  },
+  "cutter.blend": {
+    "shape_keys": {
+      "Cube.007": [
+        "Basis",
+        "opening"
+      ]
+    },
+    "error": null
+  },
+  "facet.blend": {
+    "shape_keys": {
+      "BODY_MALE.001": [
+        "Basis",
+        "jawdown",
+        "jawleft",
+        "jawright",
+        "jawjutt"
+      ],
+      "Plane": [
+        "Basis",
+        "jawdown",
+        "jawleft",
+        "jawright",
+        "jawjutt",
+        "smileL",
+        "smileR",
+        "frownL",
+        "frownR",
+        "toplipup",
+        "bottomlipdown",
+        "lipspursed",
+        "snarlL",
+        "snarlR",
+        "squintL",
+        "squintR",
+        "topeyelidR",
+        "topeyelidL",
+        "bottomeyelidR",
+        "bottomeyelidL",
+        "browangryR",
+        "browangryL",
+        "browsadR",
+        "browsadL",
+        "browouterR",
+        "browouterL",
+        "cheekpuffR",
+        "cheekpuffL"
+      ]
+    },
+    "error": null
+  },
+  "fish.blend": {
+    "shape_keys": {
+      "fish": [
+        "Basis",
+        "Shrink"
+      ]
+    },
+    "error": null
+  },
+  "kid-basic-with-smears-as-shape-key.blend": {
+    "shape_keys": {
+      "CABEZA": [
+        "Basis",
+        "MouthNarrow",
+        "MouthOpenVertical",
+        "FaceWider",
+        "LiftRightMouthCorner",
+        "LiftLeftMouthCorner",
+        "UpperLipDescend",
+        "LowerLipAscend",
+        "RightUnderJawDescend",
+        "LeftUnderJawDescend",
+        "UnderJawProtrude",
+        "UpperJawProtrude",
+        "HideUpperTeeth",
+        "HideLowerTeeth",
+        "ThickFaceSkin",
+        "ThickBackOfHead"
+      ]
+    },
+    "error": null
+  },
+  "the-amazing-white-botriggedshape-keys.blend": {
+    "shape_keys": {
+      "Cube.002": [
+        "Basis",
+        "ANGRY EYE",
+        "HAPPY EYE",
+        "SAD EYE"
+      ]
+    },
+    "error": null
+  },
+  "toby-v2-rigged-ik-shape-keys.blend": {
+    "shape_keys": {
+      "Sphere": [
+        "Basis",
+        "MouthOpen",
+        "EyeClose"
+      ]
+    },
+    "error": null
+  },
+  "toilet.blend": {
+    "shape_keys": {
+      "WC_01": [
+        "Open"
+      ]
+    },
+    "error": null
+  },
+  "veyronSketchFab.blend": {
+    "shape_keys": {
+      "Spoiler": [
+        "Basis",
+        "TailCoverLift",
+        "TailCoverSpread"
+      ],
+      "Spoiler Lifter": [
+        "Basis",
+        "Key 1",
+        "Key 2"
+      ],
+      "Spoiler Secondary Part": [
+        "Basis",
+        "TailLift"
+      ]
+    },
+    "error": null
+  },
+  "Bubble.blend": {
+    "shape_keys": {
+      "Bubble_Big": [
+        "Short",
+        "Tall"
+      ],
+      "Bubble_Standard": [
+        "Short1",
+        "Tall1"
+      ],
+      "Bubble_Typing": [
+        "Short2",
+        "Tall2"
+      ]
+    },
+    "error": null
+  },
+  "Eye.blend": {
+    "shape_keys": {
+      "Eyeball": [
+        "Pupil",
+        "Dilation",
+        "Slit",
+        "Goat",
+        "Gecko",
+        "X"
+      ]
+    },
+    "error": null
+  },
+  "GreenCharacter.blend": {
+    "shape_keys": {
+      "stylized cartoon character": [
+        "open",
+        "smile",
+        "sad",
+        "baring his teeth",
+        "narrowed",
+        "tongue out",
+        "up",
+        "arc upwards",
+        "arc down",
+        "evil eyebrows",
+        "good eyebrows",
+        "pupils"
+      ]
+    },
+    "error": null
+  },
+  "Helicopter.blend": {
+    "shape_keys": {
+      "blade": [
+        "propellerUp"
+      ]
+    },
+    "error": null
+  },
+  "IKEA_Hemmes.blend": {
+    "shape_keys": {
+      "Wardrobe Ikea Hemmes": [
+        "open right door",
+        "open left door"
+      ]
+    },
+    "error": null
+  },
+  "NeonTetraFish1.blend": {
+    "shape_keys": {
+      "red_neon_tetra_fish": [
+        "main_move_left",
+        "main_move_right",
+        "mouth_open",
+        "gill"
+      ]
+    },
+    "error": null
+  },
+  "Parachute.blend": {
+    "shape_keys": {
+      "Parachute": [
+        "Close"
+      ]
+    },
+    "error": null
+  },
+  "PictureFrame.blend": {
+    "shape_keys": {
+      "Picture Frame": [
+        "Open"
+      ]
+    },
+    "error": null
+  },
+  "SideBoard.blend": {
+    "shape_keys": {
+      "Commode": [
+        "Draver1",
+        "Draver2",
+        "Draver3",
+        "Draver4"
+      ]
+    },
+    "error": null
+  },
+  "SideboardBuffet.blend": {
+    "shape_keys": {
+      "Sideboard buffet": [
+        "darver1",
+        "draver2",
+        "draver3"
+      ]
+    },
+    "error": null
+  },
+  "SofaBed.blend": {
+    "shape_keys": {
+      "Black sofa bed": [
+        "Key 1"
+      ]
+    },
+    "error": null
+  },
+  "Spring.blend": {
+    "shape_keys": {
+      "Spring": [
+        "Thinner"
+      ]
+    },
+    "error": null
+  },
+  "Squid.blend": {
+    "shape_keys": {
+      "Caribbean reef squid": [
+        "tentacleClose"
+      ]
+    },
+    "error": null
+  },
+  "Stand.blend": {
+    "shape_keys": {
+      "Manfrotto Windup Lighting Stand": [
+        "Elevate"
+      ]
+    },
+    "error": null
+  },
+  "WoodBoard.blend": {
+    "shape_keys": {
+      "Acoustic wood_block": [
+        "LongerMore"
+      ],
+      "Acoustic wood_endPiece (use this to end your wall or cut block)": [
+        "Longer"
+      ]
+    },
+    "error": null
+  },
+  "speaker.blend": {
+    "shape_keys": {
+      "Membran": [
+        "ViberateUp"
+      ]
+    },
+    "error": null
+  }
+}

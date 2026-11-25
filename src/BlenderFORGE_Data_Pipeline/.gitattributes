@@ -1,0 +1,2 @@
+# Preserve source hashes, line endings and whitespace in the third-party snapshot.
+material/infinigen/materials_static/** -text -whitespace
