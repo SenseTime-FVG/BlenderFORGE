@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:blenderforge:state:1.0",
+  "title": "BlenderFORGE scene state v1",
+  "type": "object",
+  "required": ["schema_version", "sample_id", "state", "scene", "objects", "materials", "views"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "sample_id": {"type": "string", "minLength": 1},
+    "state": {"enum": ["start", "goal", "current"]},
+    "scene": {
+      "type": "object", "required": ["name", "frame", "units", "coordinates"],
+      "properties": {
+        "name": {"type": "string"}, "frame": {"type": "integer"},
+        "units": {"type": "object", "required": ["length", "rotation", "meters_per_blender_unit"],
+          "properties": {"length": {"const": "meter"}, "rotation": {"const": "radian"}, "meters_per_blender_unit": {"type": "number", "exclusiveMinimum": 0}}},
+        "coordinates": {"type": "object", "required": ["handedness", "up_axis", "position_reference"],
+          "properties": {"handedness": {"const": "right"}, "up_axis": {"const": "Z"}, "position_reference": {"const": "object_origin"}}}
+      }
+    },
+    "objects": {"type": "object", "minProperties": 1, "additionalProperties": {"$ref": "#/$defs/object"}},
+    "materials": {"type": "object", "additionalProperties": {"$ref": "#/$defs/material"}},
+    "views": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["camera_name", "image"],
+      "additionalProperties": false, "properties": {"camera_name": {"type": "string", "minLength": 1}, "image": {"type": ["string", "null"]}}}}
+  },
+  "$defs": {
+    "vec3": {"type": "array", "items": {"type": "number"}, "minItems": 3, "maxItems": 3},
+    "vec4": {"type": "array", "items": {"type": "number"}, "minItems": 4, "maxItems": 4},
+    "transform": {
+      "type": "object", "additionalProperties": false,
+      "required": ["location_local", "rotation_mode", "rotation", "scale_local", "matrix_world_evaluated"],
+      "properties": {
+        "location_local": {"$ref": "#/$defs/vec3"}, "scale_local": {"$ref": "#/$defs/vec3"},
+        "rotation_mode": {"enum": ["XYZ", "XZY", "YXZ", "YZX", "ZXY", "ZYX", "QUATERNION", "AXIS_ANGLE"]},
+        "rotation": {"type": "array", "items": {"type": "number"}, "minItems": 3, "maxItems": 4},
+        "matrix_world_evaluated": {"type": "array", "items": {"$ref": "#/$defs/vec4"}, "minItems": 4, "maxItems": 4}
+      },
+      "allOf": [{"if": {"properties": {"rotation_mode": {"enum": ["QUATERNION", "AXIS_ANGLE"]}}},
+                 "then": {"properties": {"rotation": {"$ref": "#/$defs/vec4"}}},
+                 "else": {"properties": {"rotation": {"$ref": "#/$defs/vec3"}}}}]
+    },
+    "camera": {
+      "type": "object",
+      "required": ["type", "lens_mm", "sensor_width_mm", "sensor_height_mm", "sensor_fit", "shift_x", "shift_y", "clip_start", "clip_end", "ortho_scale", "fov_x_radians", "fov_y_radians", "resolution", "pixel_aspect"],
+      "properties": {
+        "type": {"enum": ["PERSP", "ORTHO", "PANO"]}, "lens_mm": {"type": "number", "exclusiveMinimum": 0},
+        "sensor_width_mm": {"type": "number"}, "sensor_height_mm": {"type": "number"}, "sensor_fit": {"enum": ["AUTO", "HORIZONTAL", "VERTICAL"]},
+        "shift_x": {"type": "number"}, "shift_y": {"type": "number"}, "clip_start": {"type": "number"}, "clip_end": {"type": "number"}, "ortho_scale": {"type": "number"},
+        "fov_x_radians": {"type": ["number", "null"]}, "fov_y_radians": {"type": ["number", "null"]},
+        "resolution": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "integer", "minimum": 1}},
+        "pixel_aspect": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "number", "exclusiveMinimum": 0}}
+      }
+    },
+    "nodes": {
+      "type": ["object", "null"], "required": ["name", "nodes", "links"],
+      "properties": {
+        "name": {"type": "string"},
+        "nodes": {"type": "object", "additionalProperties": {"type": "object", "required": ["type", "inputs"],
+          "properties": {"type": {"type": "string"}, "group": {"$ref": "#/$defs/nodes"}, "inputs": {"type": "array", "items": {
+            "type": "object", "required": ["index", "name", "identifier", "socket_type", "value", "linked"],
+            "properties": {"index": {"type": "integer"}, "name": {"type": "string"}, "identifier": {"type": "string"},
+              "socket_type": {"type": "string"}, "value": {"type": ["number", "boolean", "array", "string", "object", "null"]}, "linked": {"type": "boolean"}}
+          }}}}},
+        "links": {"type": "array", "items": {"type": "object", "required": ["from_node", "from_socket", "to_node", "to_socket"],
+          "properties": {"from_node": {"type": "string"}, "from_socket": {"type": "string"}, "to_node": {"type": "string"}, "to_socket": {"type": "string"}}}}
+      }
+    },
+    "material_parameter": {
+      "type": "object", "additionalProperties": false,
+      "required": ["value", "type", "minimum", "maximum", "editable", "binding"],
+      "properties": {
+        "value": {"type": ["number", "boolean", "string", "array", "null"]},
+        "type": {"enum": ["float", "integer", "boolean", "string", "vector", "color", "null"]},
+        "minimum": {"type": ["number", "array", "null"]}, "maximum": {"type": ["number", "array", "null"]},
+        "editable": {"type": "boolean"},
+        "binding": {"oneOf": [
+          {"type": "object", "additionalProperties": false, "required": ["kind", "node_name", "input_index", "socket_identifier"],
+           "properties": {"kind": {"const": "node_input"}, "node_name": {"type": "string"}, "input_index": {"type": "integer", "minimum": 0}, "socket_identifier": {"type": "string"}}},
+          {"type": "object", "additionalProperties": false, "required": ["kind", "name"],
+           "properties": {"kind": {"const": "shader_argument"}, "name": {"type": "string"}}}
+        ]}
+      }
+    },
+    "material": {"type": "object", "required": ["use_nodes", "diffuse_color"],
+      "properties": {"use_nodes": {"type": "boolean"}, "diffuse_color": {"$ref": "#/$defs/vec4"}, "nodes": {"$ref": "#/$defs/nodes"},
+        "backend": {"enum": ["principled_bsdf", "infinigen"]},
+        "parameters": {"type": "object", "minProperties": 1, "additionalProperties": {"$ref": "#/$defs/material_parameter"}},
+        "shader": {"type": "object"}},
+      "allOf": [
+        {"if": {"required": ["backend"]}, "then": {"required": ["parameters", "shader", "nodes"]}},
+        {"if": {"required": ["backend"], "properties": {"backend": {"const": "principled_bsdf"}}},
+         "then": {"properties": {"shader": {"required": ["node_type", "node_name"], "properties": {
+           "node_type": {"const": "ShaderNodeBsdfPrincipled"}, "node_name": {"type": "string"}}}}}},
+        {"if": {"required": ["backend"], "properties": {"backend": {"const": "infinigen"}}},
+         "then": {"properties": {"shader": {"required": ["module", "function", "source_sha256", "seed", "package_version"], "properties": {
+           "module": {"type": "string"}, "function": {"type": "string"}, "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+           "seed": {"type": "integer", "minimum": 0}, "package_version": {"type": "string"}}}}}}
+      ]},
+    "light": {"type": "object", "required": ["type", "energy", "color", "use_nodes", "nodes"],
+      "properties": {"type": {"enum": ["POINT", "SUN", "SPOT", "AREA"]}, "energy": {"type": "number"}, "color": {"$ref": "#/$defs/vec3"}, "use_nodes": {"type": "boolean"}, "nodes": {"$ref": "#/$defs/nodes"}},
+      "allOf": [
+        {"if": {"properties": {"type": {"const": "AREA"}}}, "then": {"required": ["shape", "size", "size_y"]}},
+        {"if": {"properties": {"type": {"const": "SPOT"}}}, "then": {"required": ["spot_size", "spot_blend", "shadow_soft_size"]}},
+        {"if": {"properties": {"type": {"const": "POINT"}}}, "then": {"required": ["shadow_soft_size"]}},
+        {"if": {"properties": {"type": {"const": "SUN"}}}, "then": {"required": ["angle"]}}
+      ]},
+    "geometry": {"type": "object", "required": ["origin_convention", "bbox_local", "bbox_world"],
+      "properties": {"origin_convention": {"const": "blender_object_origin"},
+        "bbox_local": {"type": "array", "minItems": 8, "maxItems": 8, "items": {"$ref": "#/$defs/vec3"}},
+        "bbox_world": {"type": "array", "minItems": 8, "maxItems": 8, "items": {"$ref": "#/$defs/vec3"}}}},
+    "shapekey": {
+      "type": "object", "additionalProperties": false,
+      "required": ["value", "slider_min", "slider_max", "relative_key", "mute", "vertex_group", "interpolation", "is_basis", "has_driver", "editable"],
+      "properties": {
+        "value": {"type": "number"}, "slider_min": {"type": "number"}, "slider_max": {"type": "number"},
+        "relative_key": {"type": "string", "minLength": 1}, "mute": {"type": "boolean"},
+        "vertex_group": {"type": "string"}, "interpolation": {"type": "string"},
+        "is_basis": {"type": "boolean"}, "has_driver": {"type": "boolean"}, "editable": {"type": "boolean"}
+      }
+    },
+    "object": {
+      "type": "object", "required": ["object_type", "parent_id", "transform", "editable", "hide_render", "material_slots"],
+      "properties": {
+        "object_type": {"type": "string"}, "parent_id": {"type": ["string", "null"]}, "transform": {"$ref": "#/$defs/transform"},
+        "editable": {"type": "boolean"}, "hide_render": {"type": "boolean"}, "material_slots": {"type": "array", "items": {"type": ["string", "null"]}},
+        "camera": {"$ref": "#/$defs/camera"}, "light": {"$ref": "#/$defs/light"}, "geometry": {"$ref": "#/$defs/geometry"},
+        "shapekeys": {"type": "object", "minProperties": 1, "additionalProperties": {"$ref": "#/$defs/shapekey"}},
+        "shape_key_settings": {"type": "object", "additionalProperties": false,
+          "required": ["use_relative", "eval_time", "show_only_shape_key"],
+          "properties": {"use_relative": {"type": "boolean"}, "eval_time": {"type": "number"}, "show_only_shape_key": {"type": "boolean"}}}
+      },
+      "allOf": [
+        {"if": {"required": ["shapekeys"]}, "then": {"required": ["shape_key_settings"]}},
+        {"if": {"properties": {"object_type": {"const": "CAMERA"}}}, "then": {"required": ["camera"]}},
+        {"if": {"properties": {"object_type": {"const": "LIGHT"}}}, "then": {"required": ["light"]}},
+        {"if": {"properties": {"object_type": {"const": "MESH"}}}, "then": {"required": ["geometry"]}}
+      ]
+    }
+  }
+}

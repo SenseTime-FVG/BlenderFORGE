@@ -1,0 +1,87 @@
+{
+  "blender_asset_path": "/replace/with/your/shapekey_assets",
+  "shapekey_modifiable_path": "resources/shape_keys_output.json",
+  "shapekey_rephrase_path": "resources/shapekey_rephrases.json",
+  "save_data_path": "/replace/with/your/shapekey_dataset",
+  "rename_probability": 0.9,
+  "photometric_loss_threshold": 0.000943,
+  "Max_retry": 10,
+  "num_of_key_change": 2,
+  "min_change_proportion": 0.5,
+  "Max_num_of_key_displayed": 3,
+  "render_config": {
+    "scene": {
+      "render": {
+        "engine": "CYCLES",
+        "resolution_x": 512,
+        "resolution_y": 512,
+        "resolution_percentage": 100,
+        "pixel_aspect_x": null,
+        "pixel_aspect_y": null,
+        "film_transparent": null,
+        "use_file_extension": null,
+        "use_compositing": null,
+        "use_sequencer": null,
+        "dither_intensity": null,
+        "use_motion_blur": null,
+        "image_settings": {
+          "file_format": "PNG",
+          "color_mode": "RGB",
+          "color_depth": "8",
+          "compression": null,
+          "color_management": null
+        }
+      },
+      "cycles": {
+        "device": "GPU",
+        "samples": 128,
+        "seed": null,
+        "use_animated_seed": null,
+        "use_adaptive_sampling": null,
+        "adaptive_threshold": null,
+        "adaptive_min_samples": null,
+        "use_denoising": true,
+        "denoiser": null,
+        "denoising_input_passes": null,
+        "denoising_prefilter": null,
+        "use_light_tree": null,
+        "max_bounces": null,
+        "diffuse_bounces": null,
+        "glossy_bounces": null,
+        "transmission_bounces": null,
+        "volume_bounces": null,
+        "transparent_max_bounces": null,
+        "sample_clamp_direct": null,
+        "sample_clamp_indirect": null,
+        "blur_glossy": null,
+        "caustics_reflective": null,
+        "caustics_refractive": null
+      },
+      "display_settings": {
+        "display_device": null
+      },
+      "view_settings": {
+        "view_transform": null,
+        "look": null,
+        "exposure": null,
+        "gamma": null,
+        "use_curve_mapping": null
+      }
+    },
+    "view_layer": {
+      "cycles": {
+        "use_denoising": true
+      }
+    },
+    "devices": {
+      "compute_device_type": "CUDA",
+      "use_cpu": false,
+      "fallback_to_cpu": true
+    }
+  },
+  "num_samples": 500,
+  "start_sample_id": 0,
+  "random_seed": 42,
+  "log_level": "INFO",
+  "max_asset_attempts": 32
+}

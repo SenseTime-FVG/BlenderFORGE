@@ -1,0 +1,114 @@
+{
+  "asset_config": {
+    "blend_file_name": "normalized_scene.blend"
+  },
+  "scene_config": {
+    "min_lights_required": 1
+  },
+  "light_modification": {
+    "modify_energy": false,
+    "modify_color": true,
+    "modify_all_lights": false,
+    "max_lights_to_modify": 3,
+    "energy_strategy": "random_range",
+    "energy_change_ratio_range": [
+      1.0,
+      1.1
+    ],
+    "energy_bidirectional": true,
+    "energy_absolute_min": 0.1,
+    "energy_absolute_max": 10000.0,
+    "color_strategy": "pure_colors",
+    "color_change_per_channel": 0.9
+  },
+  "camera_config": {
+    "num_views": 3,
+    "fov": 70.0,
+    "min_distance_ratio": 0.05,
+    "max_distance_ratio": 0.3,
+    "camera_height_ratio_range": [
+      0.1,
+      0.9
+    ]
+  },
+  "render_config": {
+    "scene": {
+      "render": {
+        "engine": "CYCLES",
+        "resolution_x": 512,
+        "resolution_y": 512,
+        "resolution_percentage": 100,
+        "pixel_aspect_x": null,
+        "pixel_aspect_y": null,
+        "film_transparent": null,
+        "use_file_extension": null,
+        "use_compositing": null,
+        "use_sequencer": null,
+        "dither_intensity": null,
+        "use_motion_blur": null,
+        "image_settings": {
+          "file_format": "PNG",
+          "color_mode": "RGB",
+          "color_depth": "8",
+          "compression": null,
+          "color_management": null
+        }
+      },
+      "cycles": {
+        "device": "GPU",
+        "samples": 128,
+        "seed": null,
+        "use_animated_seed": null,
+        "use_adaptive_sampling": null,
+        "adaptive_threshold": null,
+        "adaptive_min_samples": null,
+        "use_denoising": true,
+        "denoiser": null,
+        "denoising_input_passes": null,
+        "denoising_prefilter": null,
+        "use_light_tree": null,
+        "max_bounces": 8,
+        "diffuse_bounces": null,
+        "glossy_bounces": null,
+        "transmission_bounces": null,
+        "volume_bounces": null,
+        "transparent_max_bounces": null,
+        "sample_clamp_direct": null,
+        "sample_clamp_indirect": null,
+        "blur_glossy": null,
+        "caustics_reflective": false,
+        "caustics_refractive": false
+      },
+      "display_settings": {
+        "display_device": null
+      },
+      "view_settings": {
+        "view_transform": null,
+        "look": null,
+        "exposure": null,
+        "gamma": null,
+        "use_curve_mapping": null
+      }
+    },
+    "view_layer": {
+      "cycles": {
+        "use_denoising": null
+      }
+    },
+    "devices": {
+      "compute_device_type": "CUDA",
+      "use_cpu": null,
+      "fallback_to_cpu": true
+    }
+  },
+  "validation_config": {
+    "min_photometric_difference": 0.0005
+  },
+  "blender_asset_path": "/replace/with/your/lighting_assets",
+  "save_data_path": "/replace/with/your/lighting_dataset",
+  "num_samples": 100,
+  "start_sample_id": 0,
+  "random_seed": 42,
+  "max_retries": 3,
+  "max_asset_attempts": 32
+}

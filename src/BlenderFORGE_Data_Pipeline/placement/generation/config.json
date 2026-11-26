@@ -1,0 +1,109 @@
+{
+  "description": "3D-Front Placement Dataset Generation Configuration",
+  "version": "1.0",
+  "blender_path": "/replace/with/your/blender",
+  "asset_config": {
+    "asset_dir": "/replace/with/your/3d_front_assets",
+    "blend_file_name": "scene_texture_packed.blend"
+  },
+  "scene_margin": 0.0,
+  "object_movement": {
+    "num_of_objects_change": 1,
+    "target_move_retries": 50,
+    "use_ratio_based_movement": true,
+    "target_move_min_x_ratio": 0.05,
+    "target_move_max_x_ratio": 0.3,
+    "target_move_min_y_ratio": 0.05,
+    "target_move_max_y_ratio": 0.3,
+    "target_move_min_z": 0.0,
+    "target_move_max_z": 0.3,
+    "target_move_min_yaw": 0.0,
+    "target_move_max_yaw": 180.0,
+    "fallback_min_distance": 0.05,
+    "fallback_max_distance": 2.0
+  },
+  "camera_config": {
+    "num_views": 4,
+    "min_num_visible_views": 4,
+    "fov": 70.0,
+    "camera_min_height_factor": 0.3,
+    "camera_max_height_factor": 0.8,
+    "min_object_coverage": 0.2,
+    "max_object_coverage": 0.8
+  },
+  "render_config": {
+    "scene": {
+      "render": {
+        "engine": "CYCLES",
+        "resolution_x": 512,
+        "resolution_y": 512,
+        "resolution_percentage": 100,
+        "pixel_aspect_x": 1.0,
+        "pixel_aspect_y": 1.0,
+        "film_transparent": false,
+        "use_file_extension": true,
+        "use_compositing": true,
+        "use_sequencer": true,
+        "dither_intensity": 1.0,
+        "use_motion_blur": false,
+        "image_settings": {
+          "file_format": "PNG",
+          "color_mode": "RGB",
+          "color_depth": "8",
+          "compression": 15,
+          "color_management": "FOLLOW_SCENE"
+        }
+      },
+      "cycles": {
+        "device": "GPU",
+        "samples": 128,
+        "seed": 0,
+        "use_animated_seed": false,
+        "use_adaptive_sampling": true,
+        "adaptive_threshold": 0.01,
+        "adaptive_min_samples": 0,
+        "use_denoising": true,
+        "denoiser": "OPENIMAGEDENOISE",
+        "denoising_input_passes": "RGB_ALBEDO_NORMAL",
+        "denoising_prefilter": "ACCURATE",
+        "use_light_tree": false,
+        "max_bounces": 3,
+        "diffuse_bounces": 3,
+        "glossy_bounces": 0,
+        "transmission_bounces": 0,
+        "volume_bounces": 0,
+        "transparent_max_bounces": 8,
+        "sample_clamp_direct": 0.0,
+        "sample_clamp_indirect": 10.0,
+        "blur_glossy": 1.0,
+        "caustics_reflective": true,
+        "caustics_refractive": true
+      },
+      "display_settings": {
+        "display_device": "sRGB"
+      },
+      "view_settings": {
+        "view_transform": "Filmic",
+        "look": "None",
+        "exposure": 0.0,
+        "gamma": 1.0,
+        "use_curve_mapping": false
+      }
+    },
+    "devices": {
+      "compute_device_type": "CUDA",
+      "use_cpu": false,
+      "fallback_to_cpu": true
+    }
+  },
+  "validation_config": {
+    "photometric_threshold": 0.001,
+    "min_visibility_ratio": 0.2,
+    "max_sample_retries": 8
+  },
+  "output_config": {
+    "output_base_dir": "/replace/with/your/placement_dataset",
+    "save_blend_files": true,
+    "save_restore_scripts": true
+  }
+}

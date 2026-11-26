@@ -22,9 +22,22 @@ model baselines.
 - [ ] **Evaluation code:** multi-model evaluation, task prompts and metric aggregation.
 - [ ] **Blender Sandbox:** executable scene editing, rendered feedback and scene-state export.
 - [ ] **Training code:** supervised fine-tuning and multi-turn reinforcement learning.
-- [ ] **Data generation pipeline:** task construction, scene perturbation and validation.
+- [x] **Data generation pipeline:** [task construction, scene perturbation and validation](src/BlenderFORGE_Data_Pipeline/README.md).
 - [ ] **Model checkpoints:** BlenderFORGE-trained models on Hugging Face.
 - [ ] **Datasets:** editing tasks, metadata and evaluation splits on Hugging Face.
+
+## Data Generation
+
+The [data pipeline](src/BlenderFORGE_Data_Pipeline/README.md) generates placement, lighting,
+shape-key and material editing tasks, with a placement QA pipeline. It includes
+shared sample validation and JSONL export, plus the derandomized Infinigen material
+package and its [installation instructions](src/BlenderFORGE_Data_Pipeline/material/infinigen/README.md).
+
+Run the pipeline commands from `src/BlenderFORGE_Data_Pipeline/`:
+
+```bash
+cd src/BlenderFORGE_Data_Pipeline
+```
 
 ## Citation
 
@@ -44,3 +57,6 @@ model baselines.
 ## License
 
 [MIT License](LICENSE).
+
+Bundled Infinigen material sources retain their
+[BSD 3-Clause license](src/BlenderFORGE_Data_Pipeline/material/infinigen/materials_static/LICENSE).

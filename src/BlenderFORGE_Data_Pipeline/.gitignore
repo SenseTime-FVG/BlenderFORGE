@@ -1,0 +1,11 @@
+.DS_Store
+*.swp
+__pycache__/
+*.pyc
+
+output/
+dataset/
+/experimental/
+
+test/
+test_*/

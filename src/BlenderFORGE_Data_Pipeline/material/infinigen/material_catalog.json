@@ -1,0 +1,585 @@
+{
+  "ceramic": {
+    "brick": {
+      "file_path": "ceramic/brick.py",
+      "import_path": "infinigen.assets.materials_static.ceramic.brick",
+      "shaders": [
+        {
+          "name": "shader_brick",
+          "params": [
+            "height"
+          ],
+          "defaults": {
+            "height": null
+          }
+        }
+      ]
+    },
+    "concrete": {
+      "file_path": "ceramic/concrete.py",
+      "import_path": "infinigen.assets.materials_static.ceramic.concrete",
+      "shaders": [
+        {
+          "name": "shader_concrete",
+          "params": [
+            "scale",
+            "base_color_hsv"
+          ],
+          "defaults": {
+            "scale": 1.0,
+            "base_color_hsv": null
+          }
+        }
+      ]
+    },
+    "plaster": {
+      "file_path": "ceramic/plaster.py",
+      "import_path": "infinigen.assets.materials_static.ceramic.plaster",
+      "shaders": [
+        {
+          "name": "shader_plaster",
+          "params": [
+            "plaster_colored"
+          ],
+          "defaults": {
+            "plaster_colored": null
+          }
+        }
+      ]
+    }
+  },
+  "fabric": {
+    "coarse_knit_fabric": {
+      "file_path": "fabric/coarse_knit_fabric.py",
+      "import_path": "infinigen.assets.materials_static.fabric.coarse_knit_fabric",
+      "shaders": [
+        {
+          "name": "shader_fabric_base",
+          "params": [
+            "_pattern_mixer",
+            "_pattern_density",
+            "_color",
+            "_brick_knit",
+            "_knit_resolution",
+            "_brick_resolution",
+            "_crease_resolution",
+            "_smoothness",
+            "_color_shader_frac"
+          ],
+          "defaults": {
+            "_pattern_mixer": 1.0,
+            "_pattern_density": 0.15,
+            "_color": [
+              5,
+              10.0,
+              10.0
+            ],
+            "_brick_knit": 0.0,
+            "_knit_resolution": 3.0,
+            "_brick_resolution": 40,
+            "_crease_resolution": 200,
+            "_smoothness": 0.7,
+            "_color_shader_frac": 0.01
+          }
+        }
+      ]
+    },
+    "fine_knit_fabric": {
+      "file_path": "fabric/fine_knit_fabric.py",
+      "import_path": "infinigen.assets.materials_static.fabric.fine_knit_fabric",
+      "shaders": [
+        {
+          "name": "shader_material",
+          "params": [
+            "_color",
+            "_roughness",
+            "_thread_density_x",
+            "_relative_density_y",
+            "_displacement_scale",
+            "_map"
+          ],
+          "defaults": {
+            "_color": [
+              0.2,
+              0.2,
+              0.2
+            ],
+            "_roughness": 0.4,
+            "_thread_density_x": 200,
+            "_relative_density_y": 1.0,
+            "_displacement_scale": 0.005,
+            "_map": "UV"
+          }
+        }
+      ]
+    },
+    "leather": {
+      "file_path": "fabric/leather.py",
+      "import_path": "infinigen.assets.materials_static.fabric.leather",
+      "shaders": [
+        {
+          "name": "shader_leather",
+          "params": [
+            "scale",
+            "base_color_hsv"
+          ],
+          "defaults": {
+            "scale": 1.0,
+            "base_color_hsv": null
+          }
+        }
+      ]
+    },
+    "lined_fabric": {
+      "file_path": "fabric/lined_fabric.py",
+      "import_path": "infinigen.assets.materials_static.fabric.lined_fabric",
+      "shaders": [
+        {
+          "name": "shader_lined_fur_base",
+          "params": [
+            "_hue",
+            "_saturation",
+            "_line_density"
+          ],
+          "defaults": {
+            "_hue": 0.3,
+            "_saturation": 0.7,
+            "_line_density": 10
+          }
+        }
+      ]
+    },
+    "plaid_fabric": {
+      "file_path": "fabric/plaid_fabric.py",
+      "import_path": "infinigen.assets.materials_static.fabric.plaid_fabric",
+      "shaders": [
+        {
+          "name": "shader_fabric",
+          "params": [
+            "weave_scale",
+            "color_scale",
+            "color_1_hsv",
+            "color_2_hsv"
+          ],
+          "defaults": {
+            "weave_scale": 500.0,
+            "color_scale": null,
+            "color_1_hsv": null,
+            "color_2_hsv": null
+          }
+        }
+      ]
+    },
+    "rug": {
+      "file_path": "fabric/rug.py",
+      "import_path": "infinigen.assets.materials_static.fabric.rug",
+      "shaders": [
+        {
+          "name": "shader_rug",
+          "params": [
+            "strength"
+          ],
+          "defaults": {
+            "strength": 0.01
+          }
+        }
+      ]
+    },
+    "sofa_fabric": {
+      "file_path": "fabric/sofa_fabric.py",
+      "import_path": "infinigen.assets.materials_static.fabric.sofa_fabric",
+      "shaders": [
+        {
+          "name": "shader_sofa_fabric",
+          "params": [
+            "scale",
+            "strength"
+          ],
+          "defaults": {
+            "scale": 1,
+            "strength": 0.01
+          }
+        }
+      ]
+    }
+  },
+  "fluid": {
+    "atmosphere_light_haze": {
+      "file_path": "fluid/atmosphere_light_haze.py",
+      "import_path": "infinigen.assets.materials_static.fluid.atmosphere_light_haze",
+      "shaders": [
+        {
+          "name": "shader_atmosphere",
+          "params": [
+            "enable_scatter",
+            "density",
+            "anisotropy"
+          ],
+          "defaults": {
+            "enable_scatter": true,
+            "density": [
+              "uniform",
+              0,
+              0.006
+            ],
+            "anisotropy": 0.5
+          }
+        }
+      ]
+    }
+  },
+  "metal": {
+    "brushed_metal": {
+      "file_path": "metal/brushed_metal.py",
+      "import_path": "infinigen.assets.materials_static.metal.brushed_metal",
+      "shaders": [
+        {
+          "name": "shader_brushed_metal",
+          "params": [
+            "scale",
+            "base_color_hsv"
+          ],
+          "defaults": {
+            "scale": 1.0,
+            "base_color_hsv": null
+          }
+        }
+      ]
+    },
+    "galvanized_metal": {
+      "file_path": "metal/galvanized_metal.py",
+      "import_path": "infinigen.assets.materials_static.metal.galvanized_metal",
+      "shaders": [
+        {
+          "name": "shader_galvanized_metal",
+          "params": [
+            "scale",
+            "base_color_hsv"
+          ],
+          "defaults": {
+            "scale": 1.0,
+            "base_color_hsv": null
+          }
+        }
+      ]
+    },
+    "grained_and_polished_metal": {
+      "file_path": "metal/grained_and_polished_metal.py",
+      "import_path": "infinigen.assets.materials_static.metal.grained_and_polished_metal",
+      "shaders": [
+        {
+          "name": "shader_grained_metal",
+          "params": [
+            "scale",
+            "base_color_hsv",
+            "roughness"
+          ],
+          "defaults": {
+            "scale": 1.0,
+            "base_color_hsv": null,
+            "roughness": null
+          }
+        }
+      ]
+    },
+    "hammered_metal": {
+      "file_path": "metal/hammered_metal.py",
+      "import_path": "infinigen.assets.materials_static.metal.hammered_metal",
+      "shaders": [
+        {
+          "name": "shader_hammered_metal",
+          "params": [
+            "scale",
+            "base_color_hsv"
+          ],
+          "defaults": {
+            "scale": null,
+            "base_color_hsv": null
+          }
+        }
+      ]
+    },
+    "metal_basic": {
+      "file_path": "metal/metal_basic.py",
+      "import_path": "infinigen.assets.materials_static.metal.metal_basic",
+      "shaders": [
+        {
+          "name": "shader_metal",
+          "params": [
+            "color_hsv"
+          ],
+          "defaults": {
+            "color_hsv": null
+          }
+        }
+      ]
+    }
+  },
+  "plant": {
+    "bark_birch": {
+      "file_path": "plant/bark_birch.py",
+      "import_path": "infinigen.assets.materials_static.plant.bark_birch",
+      "shaders": [
+        {
+          "name": "shader_birch_mat",
+          "params": [
+            "selection"
+          ],
+          "defaults": {
+            "selection": null
+          }
+        }
+      ]
+    },
+    "bark_random": {
+      "file_path": "plant/bark_random.py",
+      "import_path": "infinigen.assets.materials_static.plant.bark_random",
+      "shaders": [
+        {
+          "name": "shader_random_bark_mat",
+          "params": [
+            "base_color_hsv"
+          ],
+          "defaults": {
+            "base_color_hsv": null
+          }
+        }
+      ]
+    }
+  },
+  "plastic": {
+    "bumpy_rubber_floor": {
+      "file_path": "plastic/bumpy_rubber_floor.py",
+      "import_path": "infinigen.assets.materials_static.plastic.bumpy_rubber_floor",
+      "shaders": [
+        {
+          "name": "shader_bumpy_rubber",
+          "params": [
+            "scale",
+            "base_color"
+          ],
+          "defaults": {
+            "scale": 2.0,
+            "base_color": null
+          }
+        }
+      ]
+    },
+    "plastic_rough": {
+      "file_path": "plastic/plastic_rough.py",
+      "import_path": "infinigen.assets.materials_static.plastic.plastic_rough",
+      "shaders": [
+        {
+          "name": "shader_rough_plastic",
+          "params": [
+            "scale",
+            "base_color",
+            "roughness",
+            "clear"
+          ],
+          "defaults": {
+            "scale": 1.0,
+            "base_color": null,
+            "roughness": null,
+            "clear": false
+          }
+        }
+      ]
+    },
+    "plastic_translucent": {
+      "file_path": "plastic/plastic_translucent.py",
+      "import_path": "infinigen.assets.materials_static.plastic.plastic_translucent",
+      "shaders": [
+        {
+          "name": "shader_translucent_plastic",
+          "params": [
+            "clear"
+          ],
+          "defaults": {
+            "clear": false
+          }
+        }
+      ]
+    }
+  },
+  "terrain": {
+    "mountain": {
+      "file_path": "terrain/mountain.py",
+      "import_path": "infinigen.assets.materials_static.terrain.mountain",
+      "shaders": [
+        {
+          "name": "shader_MOUNTAIN",
+          "params": [
+            "obj",
+            "is_rock",
+            "spherical",
+            "preset_zrange",
+            "color",
+            "shader_roughness",
+            "num_layers",
+            "layered_mountain",
+            "prob_arranged_layers",
+            "hue_diff",
+            "max_sat",
+            "max_val",
+            "snowy"
+          ],
+          "defaults": {
+            "obj": null,
+            "is_rock": false,
+            "spherical": false,
+            "preset_zrange": [
+              0,
+              120
+            ],
+            "color": [
+              "palette",
+              "mountain soil"
+            ],
+            "shader_roughness": 1,
+            "num_layers": 16,
+            "layered_mountain": true,
+            "prob_arranged_layers": 0.1,
+            "hue_diff": 0.1,
+            "max_sat": 0.4,
+            "max_val": 0.4,
+            "snowy": false
+          }
+        }
+      ]
+    },
+    "sand": {
+      "file_path": "terrain/sand.py",
+      "import_path": "infinigen.assets.materials_static.terrain.sand",
+      "shaders": [
+        {
+          "name": "shader_SAND",
+          "params": [
+            "color",
+            "wet",
+            "wet_part"
+          ],
+          "defaults": {
+            "color": [
+              "palette",
+              "desert"
+            ],
+            "wet": false,
+            "wet_part": [
+              "uniform",
+              0.2,
+              0.25
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "wear_tear": {
+    "edge_wear": {
+      "file_path": "wear_tear/edge_wear.py",
+      "import_path": "infinigen.assets.materials_static.wear_tear.edge_wear",
+      "shaders": [
+        {
+          "name": "shader_edge_tear_free_node_group",
+          "params": [
+            "original_bsdf",
+            "original_displacement",
+            "_worn_off_opacity",
+            "_worn_off_radius",
+            "_scratch_radius",
+            "_edge_base_color_hue",
+            "_edge_base_color_whiteness",
+            "_scratch_density",
+            "_scratch_opacity"
+          ],
+          "defaults": {
+            "original_bsdf": null,
+            "original_displacement": null,
+            "_worn_off_opacity": 0.5,
+            "_worn_off_radius": 0.015,
+            "_scratch_radius": 0.01,
+            "_edge_base_color_hue": 1.0,
+            "_edge_base_color_whiteness": 0.1,
+            "_scratch_density": 5.0,
+            "_scratch_opacity": 0.2
+          }
+        }
+      ]
+    }
+  },
+  "wood": {
+    "hardwood_floor": {
+      "file_path": "wood/hardwood_floor.py",
+      "import_path": "infinigen.assets.materials_static.wood.hardwood_floor",
+      "shaders": [
+        {
+          "name": "shader_hardwood_floor",
+          "params": [
+            "rotation"
+          ],
+          "defaults": {
+            "rotation": null
+          }
+        }
+      ]
+    },
+    "tiled_wood": {
+      "file_path": "wood/tiled_wood.py",
+      "import_path": "infinigen.assets.materials_static.wood.tiled_wood",
+      "shaders": [
+        {
+          "name": "shader_wood_tiled",
+          "params": [
+            "hscale",
+            "vscale",
+            "base_color"
+          ],
+          "defaults": {
+            "hscale": null,
+            "vscale": null,
+            "base_color": null
+          }
+        }
+      ]
+    },
+    "wood": {
+      "file_path": "wood/wood.py",
+      "import_path": "infinigen.assets.materials_static.wood.wood",
+      "shaders": [
+        {
+          "name": "shader_wood",
+          "params": [
+            "color",
+            "w",
+            "vertical"
+          ],
+          "defaults": {
+            "color": null,
+            "w": null,
+            "vertical": false
+          }
+        }
+      ]
+    },
+    "wood_old": {
+      "file_path": "wood/wood_old.py",
+      "import_path": "infinigen.assets.materials_static.wood.wood_old",
+      "shaders": [
+        {
+          "name": "shader_wood_old",
+          "params": [
+            "scale",
+            "offset",
+            "rotation"
+          ],
+          "defaults": {
+            "scale": 1,
+            "offset": null,
+            "rotation": null
+          }
+        }
+      ]
+    }
+  }
+}
